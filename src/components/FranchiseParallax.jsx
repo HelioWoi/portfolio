@@ -1,14 +1,21 @@
 import Container from './Container';
 
 const FranchiseParallax = () => {
-  const franchiseBannerUrl =
+  const franchiseBannerMobileUrl =
     'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/media/banner%20dentspot%20%20-%20desktop.jpg';
+  const franchiseBannerDesktopUrl =
+    'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/media/banner%20dentspot%20%281%29.jpg';
 
   return (
     <section id="franchise" className="relative overflow-hidden py-16 sm:py-20">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url(${franchiseBannerUrl})` }}
+        className="absolute inset-0 bg-cover bg-center bg-fixed md:hidden"
+        style={{ backgroundImage: `url(${franchiseBannerMobileUrl})` }}
+        aria-hidden="true"
+      />
+      <div
+        className="absolute inset-0 hidden bg-cover bg-center bg-fixed md:block"
+        style={{ backgroundImage: `url(${franchiseBannerDesktopUrl})` }}
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
@@ -21,8 +28,8 @@ const FranchiseParallax = () => {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accentSoft">Franchise Project</p>
             <h2 className="mt-4 text-3xl font-semibold leading-tight text-pearl sm:text-4xl md:text-5xl">Structured Expansion</h2>
             <p className="mt-4 text-sm leading-relaxed text-slate-100 sm:text-base">
-              Creative and marketing assets developed to support franchise growth, aligning brand identity, customer
-              experience, and operational communication across multiple locations.
+              Designed and produced brand and marketing assets to support franchise growth, ensuring consistency
+              across locations and scalable communication.
             </p>
           </div>
         </div>

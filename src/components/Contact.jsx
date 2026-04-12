@@ -32,7 +32,21 @@ const Contact = () => {
     });
 
     if (error) {
-      setSubmitError('Unable to send your message right now. Please try again shortly or contact via WhatsApp.');
+      console.error('send-contact-email error:', error);
+
+      let detailedMessage = error.message || 'Unable to send your message right now. Please try again shortly or contact via WhatsApp.';
+
+      if (error.context && typeof error.context.json === 'function') {
+        try {
+          const errorBody = await error.context.json();
+          if (errorBody?.error) {
+            detailedMessage = errorBody.error;
+          }
+        } catch {
+        }
+      }
+
+      setSubmitError(detailedMessage);
       setSubmitted(false);
       setIsSubmitting(false);
       return;

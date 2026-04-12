@@ -21,7 +21,7 @@ Deno.serve(async (req) => {
     const { name, email, message } = (await req.json()) as ContactPayload;
 
     if (!name?.trim() || !email?.trim() || !message?.trim()) {
-      return new Response(JSON.stringify({ error: 'Dados inválidos no formulário.' }), {
+      return new Response(JSON.stringify({ error: 'Invalid form data.' }), {
         status: 400,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
@@ -34,14 +34,14 @@ Deno.serve(async (req) => {
     const fromEmail = Deno.env.get('CONTACT_FROM_EMAIL') ?? 'Portfolio <onboarding@resend.dev>';
 
     if (!supabaseUrl || !serviceRoleKey) {
-      return new Response(JSON.stringify({ error: 'Supabase service role não configurado.' }), {
+      return new Response(JSON.stringify({ error: 'Supabase service role is not configured.' }), {
         status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }
 
     if (!resendApiKey) {
-      return new Response(JSON.stringify({ error: 'Resend API Key não configurada.' }), {
+      return new Response(JSON.stringify({ error: 'Resend API key is not configured.' }), {
         status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
@@ -56,17 +56,17 @@ Deno.serve(async (req) => {
     });
 
     if (insertError) {
-      return new Response(JSON.stringify({ error: 'Falha ao salvar contato.' }), {
+      return new Response(JSON.stringify({ error: 'Failed to save contact details.' }), {
         status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
     }
 
     const emailHtml = `
-      <h2>Novo contato do portfólio</h2>
-      <p><strong>Nome:</strong> ${name}</p>
+      <h2>New portfolio contact</h2>
+      <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Mensagem:</strong></p>
+      <p><strong>Message:</strong></p>
       <p>${message.replace(/\n/g, '<br/>')}</p>
     `;
 
@@ -80,13 +80,13 @@ Deno.serve(async (req) => {
         from: fromEmail,
         to: [toEmail],
         reply_to: email,
-        subject: `Novo lead do site: ${name}`,
+        subject: `New website lead: ${name}`,
         html: emailHtml,
       }),
     });
 
     if (!resendResponse.ok) {
-      return new Response(JSON.stringify({ error: 'Falha ao enviar email.' }), {
+      return new Response(JSON.stringify({ error: 'Failed to send email.' }), {
         status: 502,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       });
@@ -97,7 +97,7 @@ Deno.serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   } catch {
-    return new Response(JSON.stringify({ error: 'Erro inesperado no envio.' }), {
+    return new Response(JSON.stringify({ error: 'Unexpected sending error.' }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });

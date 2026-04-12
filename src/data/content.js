@@ -179,7 +179,7 @@ export const testimonials = [
     quote:
       'Helio is an exceptional professional and a natural strategist with a strong vision for the future. He combines creativity with execution, consistently delivering ideas with clarity and purpose. His ability to connect with people, take ownership, and think like a business leader makes him a valuable asset in any environment.',
     name: 'Felipe Pretto Muraski',
-    role: 'Director Geral - Gestauto Brasil (Servico de garantia de carro seminovos)',
+    role: 'Managing Director - Gestauto Brazil (Used Car Warranty Services)',
     image: 'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/media/felipe.png',
   },
   {
