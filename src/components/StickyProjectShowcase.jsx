@@ -82,15 +82,7 @@ const DesktopProjectSlide = ({ project, direction, onVideoEnded, onOpenGallery }
           <h3 className="mt-4 text-4xl font-semibold leading-tight text-pearl lg:text-5xl">{project.title}</h3>
           <p className="mt-4 text-base leading-relaxed text-slate-100">{project.description}</p>
 
-          {project.gallerySlug ? (
-            <button
-              type="button"
-              onClick={() => onOpenGallery(project.gallerySlug)}
-              className="mt-8 w-fit rounded-full border border-white/35 bg-black/25 px-5 py-2.5 text-sm font-semibold text-pearl transition hover:border-accentSoft hover:text-accentSoft"
-            >
-              {project.cta} →
-            </button>
-          ) : project.link ? (
+          {project.link ? (
             <a
               href={project.link}
               target="_blank"
@@ -99,14 +91,7 @@ const DesktopProjectSlide = ({ project, direction, onVideoEnded, onOpenGallery }
             >
               {project.cta} →
             </a>
-          ) : (
-            <button
-              type="button"
-              className="mt-8 w-fit rounded-full border border-white/35 bg-black/25 px-5 py-2.5 text-sm font-semibold text-pearl transition hover:border-accentSoft hover:text-accentSoft"
-            >
-              {project.cta} →
-            </button>
-          )}
+          ) : null}
         </div>
       </div>
     </motion.article>
@@ -243,15 +228,11 @@ const StickyProjectShowcase = ({ onOpenGallery }) => {
               <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-accentSoft">{project.category}</p>
               <h3 className="mt-2 text-xl font-semibold text-pearl">{project.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-300">{project.description}</p>
-              {project.gallerySlug ? (
-                <button type="button" onClick={() => onOpenGallery(project.gallerySlug)} className="mt-4 text-sm font-semibold text-accentSoft">
+              {project.link ? (
+                <a href={project.link} target="_blank" rel="noreferrer" className="mt-4 inline-block text-sm font-semibold text-accentSoft">
                   {project.cta} →
-                </button>
-              ) : (
-                <button type="button" className="mt-4 text-sm font-semibold text-accentSoft">
-                  {project.cta} →
-                </button>
-              )}
+                </a>
+              ) : null}
             </article>
           ))}
         </div>

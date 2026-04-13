@@ -9,7 +9,7 @@ const FranchiseParallax = () => {
   return (
     <section id="franchise" className="relative overflow-hidden py-16 sm:py-20">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed md:hidden"
+        className="absolute inset-0 bg-cover bg-center md:hidden"
         style={{ backgroundImage: `url(${franchiseBannerMobileUrl})` }}
         aria-hidden="true"
       />
