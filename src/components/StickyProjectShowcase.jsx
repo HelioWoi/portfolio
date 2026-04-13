@@ -31,7 +31,7 @@ const toggleMuteOnInteract = (event) => {
   }
 };
 
-const DesktopProjectSlide = ({ project, direction, onVideoEnded }) => {
+const DesktopProjectSlide = ({ project, direction, onVideoEnded, onOpenGallery }) => {
   const desktopImage = project.desktopImage || project.image;
   const desktopVideo = project.desktopVideo || project.video;
 
@@ -82,7 +82,15 @@ const DesktopProjectSlide = ({ project, direction, onVideoEnded }) => {
           <h3 className="mt-4 text-4xl font-semibold leading-tight text-pearl lg:text-5xl">{project.title}</h3>
           <p className="mt-4 text-base leading-relaxed text-slate-100">{project.description}</p>
 
-          {project.link ? (
+          {project.gallerySlug ? (
+            <button
+              type="button"
+              onClick={() => onOpenGallery(project.gallerySlug)}
+              className="mt-8 w-fit rounded-full border border-white/35 bg-black/25 px-5 py-2.5 text-sm font-semibold text-pearl transition hover:border-accentSoft hover:text-accentSoft"
+            >
+              {project.cta} →
+            </button>
+          ) : project.link ? (
             <a
               href={project.link}
               target="_blank"
@@ -105,7 +113,7 @@ const DesktopProjectSlide = ({ project, direction, onVideoEnded }) => {
   );
 };
 
-const StickyProjectShowcase = () => {
+const StickyProjectShowcase = ({ onOpenGallery }) => {
   const total = stickyShowcaseProjects.length;
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(1);
@@ -155,6 +163,7 @@ const StickyProjectShowcase = () => {
                   project={stickyShowcaseProjects[activeIndex]}
                   direction={direction}
                   onVideoEnded={goNext}
+                  onOpenGallery={onOpenGallery}
                 />
               </AnimatePresence>
 
@@ -234,9 +243,15 @@ const StickyProjectShowcase = () => {
               <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-accentSoft">{project.category}</p>
               <h3 className="mt-2 text-xl font-semibold text-pearl">{project.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-300">{project.description}</p>
-              <button type="button" className="mt-4 text-sm font-semibold text-accentSoft">
-                {project.cta} →
-              </button>
+              {project.gallerySlug ? (
+                <button type="button" onClick={() => onOpenGallery(project.gallerySlug)} className="mt-4 text-sm font-semibold text-accentSoft">
+                  {project.cta} →
+                </button>
+              ) : (
+                <button type="button" className="mt-4 text-sm font-semibold text-accentSoft">
+                  {project.cta} →
+                </button>
+              )}
             </article>
           ))}
         </div>

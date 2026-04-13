@@ -41,6 +41,76 @@ export const services = [
   },
 ];
 
+export const galleryCollections = {
+  'photos-ecommerce': [
+    'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/media/banner%20luxe.jpg',
+    'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/media/banner%20social%20media%20photos.jpg',
+    'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/media/banner%20menulove3.jpg',
+    'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/media/banner%20land%20site.jpg',
+    'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/media/banner%20ateam2.jpg',
+    'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/media/banner%20dentspot%20%281%29.jpg',
+    'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/media/banner%20dent%20vision2.jpg',
+    'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/media/Ochre%20Sun.jpg',
+  ],
+};
+
+export const spotlightBanners = [
+  {
+    category: 'MenuLove',
+    title: 'AI-Driven Loyalty Platform',
+    description: 'Product concept, UX, front end and back end workflows, with AI-assisted features and scalable architecture.',
+    image: 'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/banners%20services/1-menulove.jpg',
+  },
+  {
+    category: 'Dent Vision AI',
+    title: 'Faster Bodyshop Quotation Flow',
+    description: 'Built to speed up quotation processes using AI-assisted assessment, helping teams move from enquiry to estimate faster.',
+    image: 'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/banners%20services/2-AI%20development.jpg',
+  },
+  {
+    category: 'Skincare Brand',
+    title: 'Concept, Bottles and Packaging Design',
+    description: 'Created the brand concept, product look, bottle direction and packaging system for a cohesive premium range.',
+    image: 'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/banners%20services/3-Skincare%20v2.jpg',
+  },
+  {
+    category: 'Fashion Editorial Studio',
+    title: 'Editorial Photography for Fashion Brands',
+    description: 'Produced fashion editorial imagery with styling-led direction to elevate campaigns, lookbooks and social content.',
+    image: 'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/banners%20services/4-%20editorial%20de%20moda.jpg',
+  },
+  {
+    category: 'Advertising Campaigns',
+    title: 'Campaign Photography Direction',
+    description: 'Developed campaign visuals with focused art direction to support paid media, launch assets and brand storytelling.',
+    image: 'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/banners%20services/5-%20campaing%20photos.jpg',
+  },
+  {
+    category: 'Social Media Photography',
+    title: 'Restaurant and Coffee Shop Content',
+    description: 'Produced social-first photo sets for restaurants and cafés, designed to keep feeds consistent and engaging.',
+    image: 'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/banners%20services/6-photos%20social%20media.jpg',
+  },
+  {
+    category: 'Landing Pages',
+    title: 'Sales-Focused Web Pages',
+    description: 'Designed and built focused landing pages with strong hierarchy, clear messaging and conversion-led layouts.',
+    image: 'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/banners%20services/7-landing%20pages%20websites.jpg',
+  },
+  {
+    category: 'Graphic Design',
+    title: 'Logos, Brochures, Flyers and Pitch Decks',
+    description: 'Created practical design systems and collateral for brand communication across digital and print touchpoints.',
+    image: 'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/banners%20services/8-brochures%20v2.jpg',
+  },
+  {
+    category: 'AI Automation',
+    title: 'Internal Process Design and Automation',
+    description: 'Mapped and automated internal workflows to reduce manual effort, improve consistency and increase team speed.',
+    image: 'https://qlpbnqdeyenbdkyqftia.supabase.co/storage/v1/object/public/banners%20services/9-automations%20AI.jpg',
+  },
+];
+
 export const projects = [
   {
     title: 'SaaS Rebrand & Growth Website',
@@ -111,6 +181,7 @@ export const stickyShowcaseProjects = [
     imagePositionDesktop: '50% 50%',
     imagePositionMobile: '52% 50%',
     cta: 'View Case',
+    gallerySlug: 'photos-ecommerce',
   },
   {
     category: 'AUTOMOTIVE MARKETING',

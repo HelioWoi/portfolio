@@ -12,6 +12,9 @@ const Footer = () => {
           <a href="https://wa.me/61491706580" target="_blank" rel="noreferrer" className="transition hover:text-pearl">
             WhatsApp: 0491 706 580
           </a>
+          <a href="https://www.linkedin.com/in/helio-woicichowski/" target="_blank" rel="noreferrer" className="transition hover:text-pearl">
+            LinkedIn
+          </a>
         </div>
       </Container>
     </footer>

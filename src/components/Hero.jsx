@@ -23,8 +23,7 @@ const Hero = () => {
       <Container className="relative z-10">
         <div className="flex min-h-[78vh] items-end justify-end pb-10 md:min-h-[76vh] md:items-center md:pb-0">
           <div
-            data-reveal
-            className="reveal w-full max-w-lg rounded-sm border border-white/15 bg-black/75 p-5 backdrop-blur-sm sm:p-6 md:bg-[#060f2a]/86 md:p-7"
+            className="w-full max-w-lg rounded-sm border border-white/15 bg-black/75 p-5 backdrop-blur-sm sm:p-6 md:bg-[#060f2a]/86 md:p-7"
           >
             <p className="mb-5 whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.14em] text-accentSoft sm:text-xs sm:tracking-[0.18em]">
               Marketing, Design & AI Product Development
