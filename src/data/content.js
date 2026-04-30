@@ -135,6 +135,27 @@ export const projects = [
   },
 ];
 
+export const selectedWebsites = [
+  {
+    name: 'Backstreet Cafe Mooloolaba',
+    category: 'Hospitality Website',
+    summary:
+      'Designed and built a warm, story-led café website that highlights ambience, menu exploration, and local identity.',
+    highlights: ['Custom brand-led UI direction', 'Mobile-first menu and venue journey', 'Performance-focused front-end build'],
+    link: 'https://backstreet-cafe.netlify.app/',
+    mockups: ['https://yyzdtpshfiqwgdwmpipb.supabase.co/storage/v1/object/public/media/1.png'],
+  },
+  {
+    name: 'Fogo&Co',
+    category: 'Premium Events Website',
+    summary:
+      'Created a high-impact website experience for Brazilian BBQ events with premium presentation and clear booking pathways.',
+    highlights: ['Visual-first premium hero direction', 'Conversion-driven content structure', 'Responsive build for event enquiries'],
+    link: 'https://fogoco.netlify.app/',
+    mockups: ['https://yyzdtpshfiqwgdwmpipb.supabase.co/storage/v1/object/public/media/2.png'],
+  },
+];
+
 export const stickyShowcaseProjects = [
   {
     category: 'PRODUCT DEVELOPMENT',

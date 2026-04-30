@@ -7,6 +7,7 @@ import FranchiseParallax from './components/FranchiseParallax';
 import Hero from './components/Hero';
 import NavBar from './components/NavBar';
 import PhotoAiBanner from './components/PhotoAiBanner';
+import SelectedWebsites from './components/SelectedWebsites';
 import Skills from './components/Skills';
 import SpotlightBanners from './components/SpotlightBanners';
 import StickyProjectShowcase from './components/StickyProjectShowcase';
@@ -58,6 +59,7 @@ const App = () => {
       <main>
         <Hero />
         <StickyProjectShowcase onOpenGallery={openGallery} />
+        <SelectedWebsites />
         <Tools />
         <About />
         <Skills />
