@@ -59,8 +59,8 @@ const App = () => {
       <main>
         <Hero />
         <StickyProjectShowcase onOpenGallery={openGallery} />
-        <SelectedWebsites />
         <Tools />
+        <SelectedWebsites />
         <About />
         <Skills />
         <PhotoAiBanner />
